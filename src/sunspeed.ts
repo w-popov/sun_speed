@@ -775,7 +775,7 @@ private getCurrentCabinAngle(): number {
 
 
   /**
-   * Отрисовка лучей колеса обозрения
+   * Отрисовка лучей колеса обозрения 
    */
   private _printRay(): void {
     const centerX = this.wheelEllipse.cx.baseVal.value;
