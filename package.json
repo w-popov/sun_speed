@@ -1,0 +1,26 @@
+{
+  "name": "sunmoscow",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"tsc -w \"",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "concurrently": "^9.2.1",
+    "lit": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/node": "^25.0.3",
+    "sass": "^1.97.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-inspect": "^11.3.3",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
