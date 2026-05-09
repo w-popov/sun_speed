@@ -239,7 +239,7 @@ export class SunSpeed extends LitElement {
   targetHour: string = (new Date().getHours()).toString();
 
   @property({type: String})
-  targetMin: string = (new Date().getMinutes()).toString();
+  targetMin: string = (new Date().getMinutes() + 1).toString();
 
   @property({type: String})
   targetSec: string = "0";
@@ -410,7 +410,12 @@ export class SunSpeed extends LitElement {
                   min="30000" max="100000" step="10" aria-describedby="lambda">
                   </div>
 
-                <div class="me-4"><p>Кабина №1 будет в позиции: <span class="fw-bold"> ~${'' + this.targetAngle.toFixed(2)}°</span></p></div>
+                <div class="me-4">
+                  <p>${this.isCheckedStart ? html`В <b>${this.targetHour}ч.</b> <b>${this.targetMin}м.</b> <b>${this.targetSec}сек.</b>` 
+                     : nothing} кабина №1 будет в позиции: 
+                    <span class="fw-bold"> ~${'' + this.targetAngle.toFixed(2)}°</span>
+                  </p>
+                </div>
                 
                 <div class="d-flex flex-wrap gap-2 justify-content-start">
                   ${this._templateCalcOtherDegsCabin()}
